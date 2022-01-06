@@ -1,0 +1,29 @@
+%preamble
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[left=3cm, right=2cm,
+top=2cm, bottom=2cm]{geometry}
+\usepackage{blindtext}
+
+\begin{document}
+\blindtext
+
+% Font chữ khác
+\texttt{\blindtext} 
+
+%Căn lề cục bộ
+\newgeometry{left=1cm, right=2cm,
+top=2cm, bottom=2cm}
+\blindtext
+
+{\LARGE \textbf{Hệ Mặt Trời}}
+
+\fontsize{20pt}{10pt}
+\selectfont
+\blindtext
+
+{\Large \textbf{Hệ Mặt Trời}}
+{\LARGE \textbf{Hệ Mặt Trời}}
+{\Huge \textbf{Hệ Mặt Trời}}
+
+\end{document}

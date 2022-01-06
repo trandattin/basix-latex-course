@@ -1,0 +1,13 @@
+**/**/a
+**/**.fdb_latexmk
+**/**.fls
+**/**.log
+**/**.synctex.gz
+**/**.thm
+**/**.DS_Store
+**/**.aux
+**/**.exe
+**/**.snm
+**/**.toc
+**/**.out
+**/**..synctex(busy)

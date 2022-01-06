@@ -1,0 +1,120 @@
+\documentclass[12pt,twoside]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[left=3.5cm, right=2cm,
+top=2cm, bottom=2cm]{geometry}
+% Gói văn bản mẫu
+\usepackage{blindtext}
+% Gói lệnh màu
+\usepackage{xcolor}
+% Gói lùi đầu dòng
+\usepackage{indentfirst}
+% Thiết lập tất cả các đoạn lùi 5cm
+\setlength{\parindent}{5cm}
+
+% Gói điều chỉnh footer and header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\LaTeX}
+\lhead{Định dạng văn bản}
+\cfoot {Trang \thepage}
+\fancyhead[LE,RO]{\LaTeX}
+\fancyhead[RE,LO]{Định dạng văn bản}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Tạo Wartermark và các thông số
+\usepackage{draftwatermark}
+\SetWatermarkText{\LaTeX\ Basics}
+\SetWatermarkScale{0.5}
+\SetWatermarkAngle{0}
+\SetWatermarkColor{blue!50}
+%\SetWatermarkLightness{0.5}
+%\SetWatermarkHorCenter{3cm}
+%\SetWatermarkVerCenter{3cm}
+
+% Tạo title
+\title{Định dạng văn bản}
+\author{Quỳnh Trang}
+\date{\today}
+
+% Đánh dấu la mã cho section
+\renewcommand\thesection{\roman{section}}
+
+% Đổ màu nền
+%\pagecolor{yellow!20!}
+% Đổ màu chữ
+%\color{blue}
+
+\newcommand{\prmt}[1]{\textit{\fontfamily{cmr}
+\selectfont$\langle$#1$\rangle$}}
+\newenvironment{Example}[2][Example]
+{This is an #1. You gave #2 as an argument.
+The rest will be bold: \bfseries}
+{}
+
+% Document
+\begin{document}
+% Gọi title
+\maketitle
+% Gọi mục lục
+\tableofcontents
+
+\section*{Lời mở đầu}
+\addcontentsline{toc}{section}{Lời mở đầu}
+
+\section{Mục 1} 
+\blindtext
+
+\newpage
+\subsection{Tiểu mục}
+\blindtext
+
+\subsubsection{Tiểu mục con}
+\blindtext
+
+\section{Lại là một mục nữa =))}
+\blindtext
+
+% Tạo trang không footer and header
+%\thispagestyle{empty}
+
+% Căn chỉnh đoạn văn
+%\centering Xin chào mọi người
+%\flushright Hôm nay là chủ nhật
+%\flushleft Mọi người đi học đầy đủ không?
+
+% Khoảng cách chữ
+\noindent a \quad b\\
+a \qquad b\\
+a \hspace{2cm} b\\
+a \hfil b \hfil c\\
+a \hfill b \hfill c
+
+\newpage
+
+\blindtext
+% Khoảng cách đoạn
+\vfill
+\blindtext
+
+\newpage
+
+% Đổ màu trang
+\pagecolor{yellow!30!}
+% Đổ màu chữ
+\textcolor{blue}{ĐH Bách Khoa HN}
+% Đổ màu nền chữ
+\colorbox{red}{Viện Toán ứng dụng và Tin học}\\
+
+
+% Định nghĩa màu
+\definecolor{HustRed}{RGB}{206,22,40}
+
+% Dùng newenvironment
+\begin{Example}{Theorem}
+	Đây là một định lý. 
+\end{Example}
+
+\end{document}

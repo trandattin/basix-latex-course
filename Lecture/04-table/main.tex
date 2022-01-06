@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+% Gói chèn cột
+\usepackage{multicol}
+% Gói chèn hàng
+\usepackage{multirow}
+% Gói tô màu nền cho table
+\usepackage[table]{xcolor}
+% Điều chỉnh độ dày viền
+\setlength{\arrayrulewidth}{1.5pt}
+% Điều chỉnh độ rộng hai bên trong mỗi ô trong bảng là 1 cm
+\setlength{\tabcolsep}{1cm}
+% Điều chỉnh khoảng cách phía trên và dưới trong bảng rộng {3} lần so với bình thường
+\renewcommand{\arraystretch}{3}
+
+\newcolumntype{f}{>{columncolor{red!10}}haligni}
+
+\begin{document}
+
+% Tạo màu cho viền của bảng
+\arrayrulecolor{red}
+% Tô màu cho các ô 
+% \rowcolors{tô màu từ dòng=}{ô lẻ}{ô chẵn}
+{\rowcolors{1}{green!10}{blue!10}
+\begin{tabular}{|c|c|c|}
+	\hline
+	% Tô màu cho dòng riêng biệt
+	% \rowcolor{màu!độ nhạt}
+	% Ghép cột
+	% \multicolumn{số ô}{cú pháp}{nội dung}
+	\rowcolor{yellow!20}\multicolumn{2}{|c|}{ô 1 và 2} & ô 3 \\
+	% Ghép hàng
+	% \multirow{số ô}{khoảng cách}{nội dung}
+	\multirow{2}{1.5cm}{ô 4 và 7} & ô 5 & ô 6 \\
+	& ô 8 & ô 9 \\
+	\hline
+\end{tabular}}
+
+\vspace{3cm}
+
+\begin{tabular}{|c|c|c|}
+	\hline
+	\multicolumn{2}{|c|}{\cellcolor{red!10}ô 1 và 2} & \cellcolor{blue!10}ô 3 \\
+	\hline
+	\multirow{2}{1.5cm}{ô 4 và 7} & ô 5 & ô 6 \\
+	& ô 8 & ô 9 \\
+	\hline
+\end{tabular}
+
+\begin{center}
+	\begin{tabular}{| p{2cm} | p{1cm} | m{2cm} | p{1cm} |}
+	\hline
+	Col1 & Col2 & Col2 & Col3 \\ [0.5ex] \hline
+	\hline
+	1 \newline dòng thứ 2 & 6 & 87837 & 787 \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\end{document}

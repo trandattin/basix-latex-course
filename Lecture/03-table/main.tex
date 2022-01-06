@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+
+% Điều chỉnh ký hiệu mặc định của gói
+\usepackage{enumerate}
+
+% Không sử dựng chung với gói enumerate
+% Gói enumitem dùng để điều chỉnh khoảng cách giữa các \item
+%\usepackage{enumitem}
+\renewcommand{\labelenumii}{\Roman{enumii}}
+\renewcommand{\labelenumi}{$\star$}
+
+% Môi trường tham chiếu
+\usepackage{paralist}
+
+\usepackage{tasks}
+
+%\usepackage{array}
+
+\usepackage{tabu}
+
+\begin{document}
+
+\begin{enumerate}
+	\item One
+	\begin{enumerate}
+		\item ex 1
+		\item ex 2
+		\item ex 3
+	\end{enumerate}
+		\item Two
+\end{enumerate}
+
+\begin{description}
+	\item[Hàm số] là trường hợp đặc biệt của ánh xạ
+\end{description}
+	
+Điều cần phải làm
+\begin{asparaenum}[I]
+	\item điều 1
+	\item điều 2 \label{n1}
+\end{asparaenum}
+	
+Nhưng không cần làm
+\begin{inparaenum}[(a)]
+	\item điều 3
+	\item điều 4 \label{n2}
+\end{inparaenum}\\
+
+Hôm nay hãy làm \ref{n1} nhưng không làm \ref{n2}.
+
+\begin{tasks}[label=\roman*. ](4) %set số task mỗi dòng
+	\task câu 1
+	% Dấu * để xuống dòng
+	\task* câu 2
+	\task câu 3
+	\task câu 4
+	\task câu 5
+	\task câu 6
+	\task câu 7
+	\task câu 8
+	\task câu 9
+\end{tasks}
+
+\newpage
+
+% Các float để đặt vị trí tabular bằng môi trường table
+% h là here, b là bottom, t là top, p là special page và ! là ghi đè mặc định
+\begin{table}[h]
+\begin{center}
+Một bảng đơn giản 
+\begin{tabular}{ | p{2cm} | m{2cm} | m{2cm} |}
+	\hline
+	ô 1  & ô 2 & ô 3\\ [0.5ex] 
+	\hline\hline
+	ô 3 & ô 4 & ô 5\\
+	\cline{1-2} 
+	ô 6 & ô 7 & ô 8\\
+	\hline
+\end{tabular}
+\end{center}
+	\caption{Bảng}
+	\label{b1}
+\end{table}
+Gọi tham chiếu: Bảng \ref{b1}
+
+\newpage
+% Gói tabu
+\begin{tabu} to 0.8\textwidth {|X[c]|X[c]|X[c]|}
+	\hline
+	item 11 & item 12 & item 13 \\
+	\hline
+	item 21 & item 22 & item 23 \\
+	\hline
+\end{tabu}
+
+\end{document}
