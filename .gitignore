@@ -10,4 +10,5 @@
 **/**.snm
 **/**.toc
 **/**.out
-**/**..synctex(busy)
+**/**.synctex(busy)
+**/**.nav
